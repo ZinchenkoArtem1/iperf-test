@@ -33,4 +33,4 @@ def server():
 
 @pytest.fixture(scope="function")
 def client():
-    return subprocess.run(["iperf3", "-c", "192.168.1.110", "--json"], capture_output=True, text=True)
+    return subprocess.run(["iperf3", "-c", server_ip, "--json"], capture_output=True, text=True)
